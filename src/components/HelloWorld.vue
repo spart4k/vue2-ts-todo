@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-    <div class="">
+    <div class="users">
       <User :user="user" v-for="user in usersList"/>
     </div>
   </div>
@@ -36,13 +36,14 @@ export default defineComponent ({
       })
     }
     const createUser = (user: IUser) => {
-      const { id, firstName, age, height, birthDate } = user
+      const { id, firstName, age, height, birthDate, image } = user
       usersList.value.push({
         id,
         firstName,
         age,
         height,
         birthDate,
+        image,
       })
     }
     onMounted( async () => {
@@ -84,5 +85,11 @@ li {
 }
 a {
   color: #42b983;
+}
+.users {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 </style>

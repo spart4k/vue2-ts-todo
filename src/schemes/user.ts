@@ -6,4 +6,5 @@ export interface IUser {
 	// departament: Department
 	age: number
 	birthDate: Date
+	image: string
 }

@@ -1,4 +1,19 @@
+$imageSize: 50px;
 .user {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  // justify-content: center;
+  align-items: center;
+  width: 400px;
+  > div {
+    &:not(:last-child) {
+      margin-right: 5px;
+    }
+  }
+  &-image {
+    width: $imageSize;
+    height: $imageSize;
+  }
+  &-name {
+    // margin-right: 5px;
+  }
 }
